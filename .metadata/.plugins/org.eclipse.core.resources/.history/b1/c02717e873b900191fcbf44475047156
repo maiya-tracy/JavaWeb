@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./checkerboard.css">
+<meta charset="ISO-8859-1">
+<title>Checkerboard</title>
+</head>
+<body>
+	<div id="wrapper">
+		<%
+		int req = request.getParameter("width");
+	%>
+		<h1>Welcome</h1>
+
+		<% for (i=0; i<x; i++) %>
+		<div class="row">
+			<% for (j=0; j<y; j++) {
+			if ((i + j) % 2 == 0) %>
+			<div class="boxes color11"></div>
+			<% else if ((i + j) % 2 == 1) %>
+			<div class="boxes color22"></div>
+			<% } %>
+		</div>
+	</div>
+</body>
+</html>

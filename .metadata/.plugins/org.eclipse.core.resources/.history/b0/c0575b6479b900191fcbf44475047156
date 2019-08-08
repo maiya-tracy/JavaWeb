@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./checkerboard.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta charset="ISO-8859-1">
+<title>Checkerboard</title>
+<style>
+.color1 {
+	background-color: blue;
+}
+.color2 {
+	background-color: pink;
+}
+</style>
+</head>
+<body>
+	<div id="wrapper">
+		<%
+			int x = Integer.parseInt(request.getParameter("width"));
+			int y = Integer.parseInt(request.getParameter("height"));
+		%>
+		<h1>Welcome</h1>
+
+		<%
+			for (int i = 0; i < x; i++) {
+		%>
+		<div class="row">
+			<%
+				for (int j = 0; j < y; j++) {
+					if ((i + j) % 2 == 0)
+			%>
+			<div class="boxes color1">i</div>
+			<%
+				 if ((i + j) % 2 == 1)
+			%>
+			<div class="boxes color2">j</div>
+			<%
+				}
+			}
+			%>
+		</div>
+	</div>
+</body>
+</html>

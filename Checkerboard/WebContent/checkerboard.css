@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper {
+	margin: 0px auto;
+	background-color: white;
+	min-width: 400px;
+	padding-left: 50px;
+}
+.boxes {
+	min-width: 50px;
+	min-height: 50px;
+	display: inline-block;
+}
+.color1 {
+	background-color: blue;
+}
+.color2 {
+	background-color: pink;
+}
